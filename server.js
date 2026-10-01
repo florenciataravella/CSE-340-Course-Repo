@@ -34,22 +34,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async (req, res) => {
     const title = 'Home';
-    res.render('home', { title });
+  res.render('home', { title, pageKey: 'home' });
 });
 
 app.get('/organizations', async (req, res) => {
     const title = 'Our Partner Organizations';
-    res.render('organizations', { title });
+    res.render('organizations', { title, pageKey: 'organizations' });
 });
 
 app.get('/projects', async (req, res) => {
     const title = 'Service Projects';
-    res.render('projects', { title });
+    res.render('projects', { title, pageKey: 'projects' });
 });
 
 app.get('/categories', async (req, res) => {
   const title = 'Categories';
-  res.render('categories', { title });
+  res.render('categories', { title, pageKey: 'categories' });
 });
 
 app.listen(PORT, () => {

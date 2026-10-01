@@ -1,9 +1,35 @@
 <%- include('partials/header') %>
-    <main>
-        <h1><%= title %></h1>
-        <h2>Welcome to the CSE 340 Service Network!</h2>
-<p>Our mission is to promote service across the world by connecting volunteers with service opportunities in their community.</p>
-
-<img class="main-logo" src="images/cse340-service-network.png" alt="CSE 340 Service Network Logo">
+    <main class="page-shell" id="main-content">
+        <section class="home-hero" aria-labelledby="home-title">
+            <div class="home-copy">
+                <p class="page-kicker">CSE 340 Service Network</p>
+                <h1 id="home-title">Service starts in your community.</h1>
+                <p>Our mission is to promote service across the world by connecting volunteers with service opportunities in their community.</p>
+                <div class="home-actions">
+                    <a class="button-link" href="/projects">Explore projects</a>
+                    <a class="button-link" href="/organizations">Meet our partners</a>
+                </div>
+            </div>
+            <figure class="home-visual">
+                <img src="/images/cse340-service-network.png" alt="CSE 340 Service Network">
+            </figure>
+        </section>
+        <nav class="home-pathways" aria-label="Explore the service network">
+            <a class="pathway-link" href="/projects">
+                <span class="pathway-index" aria-hidden="true">01</span>
+                <span><strong>Find a project</strong><small>Take part in local service</small></span>
+                <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="pathway-link" href="/organizations">
+                <span class="pathway-index" aria-hidden="true">02</span>
+                <span><strong>Meet our partners</strong><small>Connect with community groups</small></span>
+                <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="pathway-link" href="/categories">
+                <span class="pathway-index" aria-hidden="true">03</span>
+                <span><strong>Explore causes</strong><small>Find an area that matters to you</small></span>
+                <span class="pathway-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+        </nav>
     </main>
 <%- include('partials/footer') %>

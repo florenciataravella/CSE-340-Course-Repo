@@ -1,0 +1,132 @@
+.home-page {
+    background: var(--canvas);
+}
+
+.home-hero {
+    display: grid;
+    min-height: 30rem;
+    padding: 3.5rem;
+    align-items: center;
+    grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.9fr);
+    gap: 3rem;
+    background: var(--paper);
+    border-bottom: 8px solid var(--gold);
+}
+
+.home-copy h1 {
+    max-width: 10ch;
+    margin-bottom: 1.2rem;
+    font-size: 3.75rem;
+}
+
+.home-copy > p:not(.page-kicker) {
+    max-width: 38rem;
+    margin-bottom: 1.6rem;
+    color: var(--muted);
+    font-size: 1.15rem;
+}
+
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.home-visual {
+    display: grid;
+    min-height: 18rem;
+    margin: 0;
+    padding: 2rem;
+    place-items: center;
+    background: #dcebe2;
+}
+
+.home-visual img {
+    width: min(100%, 24rem);
+    height: auto;
+    object-fit: contain;
+}
+
+.home-pathways {
+    display: grid;
+    padding-top: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.pathway-link {
+    display: grid;
+    min-height: 7rem;
+    padding: 1.1rem 1.2rem;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    border-top: 3px solid var(--leaf);
+    background: var(--paper);
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.pathway-link:nth-child(2) {
+    border-color: var(--coral);
+}
+
+.pathway-link:nth-child(3) {
+    border-color: var(--blue);
+}
+
+.pathway-link:hover {
+    color: var(--coral);
+}
+
+.pathway-index {
+    color: var(--coral);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.6rem;
+}
+
+.pathway-link strong,
+.pathway-link small {
+    display: block;
+}
+
+.pathway-link small {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.pathway-arrow {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .home-hero {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .home-copy h1 {
+        max-width: 13ch;
+        font-size: 3rem;
+    }
+
+    .home-visual {
+        min-height: 14rem;
+    }
+
+    .home-pathways {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-hero {
+        padding: 1.35rem;
+    }
+
+    .home-copy h1 {
+        font-size: 2.45rem;
+    }
+}
