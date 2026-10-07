@@ -7,7 +7,7 @@
         </header>
         <ul class="organization-grid" aria-label="Partner organizations">
             
-                <% organizations.forEach(function(organization) { %>
+                <% organizations.forEach(organization => { %>
                     <li class="organization-card">
                     <img src="/images/<%= organization.logo_filename %>" class="organization-card-logo">
                     <alt = "<%= organization.name %> logo"
