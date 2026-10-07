@@ -6,18 +6,15 @@
             <p class="page-intro">Meet the partner organizations connecting people with meaningful service in their communities.</p>
         </header>
         <ul class="organization-grid" aria-label="Partner organizations">
-            <li class="organization-card">
-                <img src="/images/brightfuture-logo.png" alt="BrightFuture Builders logo">
-                <div><h2>BrightFuture Builders</h2><a href="mailto:info@brightfuture.org">info@brightfuture.org</a></div>
-            </li>
-            <li class="organization-card">
-                <img src="/images/greenharvest-logo.png" alt="GreenHarvest Growers logo">
-                <div><h2>GreenHarvest Growers</h2><a href="mailto:contact@greenharvest.org">contact@greenharvest.org</a></div>
-            </li>
-            <li class="organization-card">
-                <span class="organization-mark" aria-hidden="true">US</span>
-                <div><h2>UnityServe Volunteers</h2><a href="mailto:hello@unityserve.org">hello@unityserve.org</a></div>
-            </li>
+            
+                <% organizations.forEach(function(organization) { %>
+                    <li class="organization-card">
+                    <img src="/images/<%= organization.logo_filename %>" class="organization-card-logo">
+                    <alt = "<%= organization.name %> logo"
+                    <strong class="organization-card-name"><%= organization.name %><strong>:
+                    <%=organization.contact_email%>     
+                    </li>
+                    <% }); %>
         </ul>
     </main>
 <%- include('partials/footer') %>
